@@ -14,6 +14,7 @@ job('Aplicacion Node.js DSL') {
     }
     steps {
         shell("npm install")
+	shell("npm audit fix")
     }
     publishers {
 	slackNotifier {
